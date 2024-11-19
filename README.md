@@ -1,0 +1,1 @@
+Esta es una web destinada a Ferreteria la forja. Un comercio que cuenta con todo el rubro de ferreteria, sanitarios, electricidad y pintura. La idea principal es que el cliente se encuentre con una web intuitiva y facil de utilizar con el fin de acceder a la mercaderia que este necesitando.
