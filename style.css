@@ -153,4 +153,14 @@
       padding: 15px;
     }
   }
+  input[type="submit"] {
+    background-color: #fd7d05;
+    color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #e56d00;
+    transform: scale(1.05);
+  }
   
