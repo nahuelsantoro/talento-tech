@@ -107,20 +107,16 @@
     margin-bottom: 20px;
     border: 1px solid #ccc;
   }
-  
-  input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #555;
-  }
-  
+input[type="submit"] {
+  background-color: #fd7d05;
+  color: #fff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #e56d00;
+  transform: scale(1.05);
+}
   /* Estilos para el footer */
   
   footer {
@@ -150,17 +146,5 @@
     }
   
     section {
-      padding: 15px;
-    }
-  }
-  input[type="submit"] {
-    background-color: #fd7d05;
-    color: #fff;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #e56d00;
-    transform: scale(1.05);
-  }
-  
+      padding: 15px; 
+    } 
