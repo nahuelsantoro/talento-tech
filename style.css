@@ -94,6 +94,22 @@
     height: auto;
     object-fit: contain;
     border-radius: 10px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .imagen-ferreteria:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
   
   /* Estilos para el formulario */
