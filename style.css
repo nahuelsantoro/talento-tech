@@ -12,8 +12,8 @@
     min-height: 100vh;
     background-color: #181818;
     background-image: url("laforja8.jpg");
-    background-size: contain;
-    background-position: center top;
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #929090;
