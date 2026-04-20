@@ -35,30 +35,40 @@ header {
   color: #110e0e;
   padding: 10px 20px;
   text-align: center;
+  position: relative;
+  min-height: 90px;
 }
 
 .logo-container {
   position: relative;
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 0;
   max-height: 90px;
   overflow: hidden;
   text-align: center;
 }
 
 .logo-container img {
-  width: auto;
-  max-width: 300px;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   max-height: 90px;
   display: block;
-  margin: 0 auto;
   transition: transform 0.4s ease;
   animation: logo-bounce-v2 4s ease-in-out infinite;
 }
 
 .logo-container img:hover {
   transform: scale(1.08);
+}
+
+nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 10;
 }
 
 nav ul {
@@ -69,6 +79,8 @@ nav ul {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 nav li {
@@ -76,31 +88,22 @@ nav li {
 }
 
 nav a {
-  color: #110e0e;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.2s ease;
   position: relative;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px 12px;
+  border-radius: 4px;
 }
 
 nav a:hover {
-  color: #410ef7;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: #0e0808;
-  transition: width 0.3s;
-}
-
-nav a:hover::after {
-  width: 100%;
+  color: #fd7d05;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-shadow: none;
 }
 
 /* ============================================
@@ -288,6 +291,44 @@ input[type="submit"]:active {
 }
 
 /* ============================================
+   WHATSAPP BUTTON
+   ============================================ */
+
+.whatsapp-button {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #25d366;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-link i {
+  font-size: 1.5em;
+}
+
+.whatsapp-link:hover {
+  background-color: #20ba5a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-link:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 
@@ -317,7 +358,7 @@ footer p {
   }
 }
 
-@keyframes logo-bounce-v2-v2 {
+@keyframes logo-bounce-v2 {
   0%, 100% {
     transform: translateY(0);
   }
@@ -333,10 +374,10 @@ footer p {
 @media (max-width: 1024px) {
   header {
     padding: 8px 15px;
+    min-height: 78px;
   }
 
   .logo-container img {
-    max-width: 250px;
     max-height: 78px;
   }
 
@@ -360,10 +401,10 @@ footer p {
 @media (max-width: 768px) {
   header {
     padding: 8px 10px;
+    min-height: 65px;
   }
 
   .logo-container img {
-    max-width: 200px;
     max-height: 65px;
   }
 
@@ -406,10 +447,10 @@ footer p {
 @media (max-width: 480px) {
   header {
     padding: 6px 8px;
+    min-height: 58px;
   }
 
   .logo-container img {
-    max-width: 150px;
     max-height: 58px;
   }
 
@@ -427,6 +468,7 @@ footer p {
 
   nav a {
     font-size: 0.85em;
+    padding: 6px 10px;
   }
 
   main {
