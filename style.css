@@ -21,7 +21,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-clip: border-box;
-    color: #929090;
+    color: #111111;
   }
   
   /* Estilos para el header */
@@ -65,7 +65,7 @@
   }
   
   nav a {
-    color: #0c0c0c;
+    color: #110e0e;
     text-decoration: none;
     transition: color 0.2s ease;
   }
@@ -85,6 +85,7 @@
   
   section {
     background-color: #fff;
+    color: #111111;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -240,10 +241,12 @@
   }
   section:nth-child(even) {
     background-color: #6d6c6c;
+    color: #ffffff;
   }
   
   section:nth-child(odd) {
     background-color: #f06f06;
+    color: #110e0e;
   }
     
   
