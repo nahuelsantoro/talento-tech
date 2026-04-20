@@ -12,9 +12,10 @@
     min-height: 100vh;
     background-color: #181818;
     background-image: url("laforja8.jpg");
-    background-size: cover;
-    background-position: center center;
+    background-size: contain;
+    background-position: center top;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #929090;
   }
   
@@ -84,9 +85,9 @@
   }
   
   .imagen-ferreteria {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
   }
   
