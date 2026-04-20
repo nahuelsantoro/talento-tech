@@ -1,252 +1,431 @@
-/* Estilos generales */
+/* ============================================
+   ESTILOS GENERALES
+   ============================================ */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  html, body {
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #181818;
-    background-image: url("laforja8.jpg");
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-clip: border-box;
-    color: #111111;
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #181818;
+  background-image: url("laforja8.jpg");
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #111111;
+}
+
+/* ============================================
+   HEADER Y NAVEGACIÓN
+   ============================================ */
+
+header {
+  background-color: #fd7d05;
+  color: #110e0e;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.logo-container img {
+  width: auto;
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.4s ease;
+  animation: logo-bounce 4s ease-in-out infinite;
+}
+
+.logo-container img:hover {
+  transform: scale(1.08);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  color: #110e0e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #410ef7;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #0e0808;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   CONTENIDO PRINCIPAL
+   ============================================ */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+section {
+  background-color: #fff;
+  color: #111111;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+section:nth-child(even) {
+  background-color: #6d6c6c;
+  color: #ffffff;
+}
+
+section:nth-child(odd) {
+  background-color: #f06f06;
+  color: #110e0e;
+}
+
+h1, h2, h3 {
+  color: #fd7d05;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #110e0e;
+}
+
+h3 {
+  color: #110e0e;
+  font-size: 1.1em;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+a {
+  color: #fd7d05;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+blockquote {
+  margin: 15px 0;
+  padding-left: 15px;
+  border-left: 4px solid #fd7d05;
+  font-style: italic;
+}
+
+cite {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ============================================
+   IMÁGENES E IFRAMES
+   ============================================ */
+
+.imagen-ferreteria {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  animation: float 6s ease-in-out infinite;
+  margin: 15px 0;
+}
+
+.imagen-ferreteria:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+iframe {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  min-height: 315px;
+  border-radius: 8px;
+}
+
+/* ============================================
+   FORMULARIO
+   ============================================ */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #110e0e;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #fd7d05;
+  box-shadow: 0 0 5px rgba(253, 125, 5, 0.3);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button,
+input[type="submit"] {
+  background-color: #fd7d05;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #e56d00;
+  transform: scale(1.05);
+}
+
+button:active,
+input[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  /* Estilos para el header */
-  
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes logo-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ============================================
+   MEDIA QUERIES - TABLETS (1024px)
+   ============================================ */
+
+@media (max-width: 1024px) {
   header {
-    background-color: #fd7d05;
-    color: #110e0e;
-    padding: 20px;
-    text-align: center;
+    padding: 15px;
   }
 
-  .logo-container { 
-    position: relative; width: 100%; } 
-    
-    .logo-container img { 
-      width: auto;
-      max-width: 150px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      transition: transform 0.4s ease;
-      animation: logo-bounce 4s ease-in-out infinite;
-    }
-
-    .logo-container img:hover {
-      transform: scale(1.08);
-    }
-  
-  
-  nav ul {
-    list-style: none;
-    margin: 100;
-    padding: 100;
-    display: flex;
-    justify-content: space-between;
-  
+  .logo-container img {
+    max-width: 120px;
   }
-  
+
   nav li {
-    margin-right: 80px;
+    margin: 0;
   }
-  
-  nav a {
-    color: #110e0e;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  nav a:hover {
-    color: #410ef7;
-  }
-  
-  /* Estilos para el main */
-  
+
   main {
-    display: flex;
+    padding: 15px;
+  }
+
+  section {
+    padding: 15px;
+  }
+}
+
+/* ============================================
+   MEDIA QUERIES - MOBILE (768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .logo-container img {
+    max-width: 100px;
+  }
+
+  nav ul {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    gap: 10px;
   }
-  
+
+  nav li {
+    margin: 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
   section {
-    background-color: #fff;
-    color: #111111;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
   }
-  
-  h1, h2 {
-    color: #fd7d05;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+  h1 {
+    font-size: 1.5em;
   }
 
   h2 {
-    color: #110e0e;
-  }
-  
-  p {
-    margin-bottom: 20px;
-  }
-  
-  .imagen-ferreteria {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    transition: transform 0.5s ease, filter 0.5s ease;
-    animation: float 6s ease-in-out infinite;
+    font-size: 1.2em;
   }
 
-  .imagen-ferreteria:hover {
-    transform: scale(1.05);
-    filter: brightness(1.05);
+  iframe {
+    min-height: 280px;
+  }
+}
+
+/* ============================================
+   MEDIA QUERIES - SMALL MOBILE (480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  header {
+    padding: 8px;
   }
 
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+  .logo-container img {
+    max-width: 80px;
   }
 
-  @keyframes logo-bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-8px);
-    }
+  h1 {
+    font-size: 1.2em;
   }
-  
-  /* Estilos para el formulario */
-  
-  form {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 1em;
   }
-  
-  label {
-    display: block;
+
+  nav ul {
+    gap: 5px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+
+  main {
+    padding: 5px;
+  }
+
+  section {
+    padding: 10px;
     margin-bottom: 10px;
   }
-  
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+
+  iframe {
+    min-height: 200px;
   }
-  
+
+  button,
   input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #555;
-  }
-  
-  /* Estilos para el footer */
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    clear: both;
-  }
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    nav li {
-      margin-bottom: 10px;
-    }
-  
-    .logo {
-      width: 80px;
-      height: 80px;
-    }
-  
-    main {
-      padding: 10px;
-    }
-  
-    section {
-      padding: 15px;
-    }
-  }
-  input[type="submit"] {
-    background-color: #fd7d05;
-    color: #fff;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #e56d00;
-    transform: scale(1.05);
-  }
-  
-  header {
-    color: #da6b04;
-  }
-  section {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
-    border-radius: 10px;
-  }
-  nav a {
-    position: relative;
-  }
-  
-  nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background-color: #0e0808;
-    transition: width 0.3s;
-  }
-  
-  nav a:hover::after {
     width: 100%;
+    align-self: stretch;
   }
-  section:nth-child(even) {
-    background-color: #6d6c6c;
-    color: #ffffff;
-  }
-  
-  section:nth-child(odd) {
-    background-color: #f06f06;
-    color: #110e0e;
-  }
-    
-  
+}

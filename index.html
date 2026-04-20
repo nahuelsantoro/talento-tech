@@ -7,50 +7,66 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-      <div class="logo-container">
-        <img src="laforja9.png" alt="Logo Ferretería La Forja" class="logo" width="150">
-      </div>
+  <header>
+    <div class="logo-container">
+      <img src="laforja9.png" alt="Logo Ferretería La Forja" class="logo">
+    </div>
     <nav>
       <ul>
-        <li><a href="#inicio" target="_blank">INICIO</a></li>
-        <li><a href="#resenas" target="_blank">RESEÑAS</a></li>
-        <li><a href="#contacto" target="_blank">CONTACTO</a></li>
+        <li><a href="#inicio">INICIO</a></li>
+        <li><a href="#resenas">RESEÑAS</a></li>
+        <li><a href="#contacto">CONTACTO</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <section id="inicio">
       <h1>Bienvenidos a Ferretería La Forja</h1>
       <p>Encuentra todo lo que necesitas para tu proyecto</p>
-      <img src="laforja2.webp" alt="Imagen ferretería" class="imagen-ferreteria" width="350">
+      <img src="laforja2.webp" alt="Imagen ferretería" class="imagen-ferreteria">
     </section>
-      </ul>
+
+    <section id="productos">
       <h2>Producto mas elegido del mes</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/CuuOP0grXHM?si=Vovb939Ziy3GfY3d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/CuuOP0grXHM?si=Vovb939Ziy3GfY3d" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
+
     <section id="resenas">
       <h2>Reseñas de nuestros clientes</h2>
       <blockquote>
         <p>"Excelente servicio y productos de calidad"</p>
-        <cite> Juan Pérez</cite>
+        <cite>Juan Pérez</cite>
       </blockquote>
     </section>
+
     <section id="contacto">
       <h2>Contáctanos</h2>
-      <p>Teléfono: 2212243516</p>
+      <p>Teléfono: <a href="tel:2212243516">2212243516</a></p>
       <p>Correo electrónico: <a href="mailto:ferreterialaforja5@gmail.com">ferreterialaforja5@gmail.com</a></p>
-      <P>Ubicación</P>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3268.9817082966574!2d-57.9988897!3d-34.9821229!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e96bb41e67b1%3A0x90f6b8b00121756b!2sFerreteria%20La%20Forja!5e0!3m2!1ses-419!2sar!4v1727755577957!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <h3>Ubicación</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3268.9817082966574!2d-57.9988897!3d-34.9821229!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e96bb41e67b1%3A0x90f6b8b00121756b!2sFerreteria%20La%20Forja!5e0!3m2!1ses-419!2sar!4v1727755577957!5m2!1ses-419!2sar" title="Ubicación de Ferretería La Forja" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
-    <form>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre"><br><br>
-      <label for="consulta">Consulta:</label>
-      <textarea id="consulta" name="consulta" rows="5" cols="30"></textarea><br><br>
-      <input type="submit" value="Enviar">
-    </form>
+
+    <section id="formulario">
+      <h2>Envíanos tu consulta</h2>
+      <form>
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="consulta">Consulta:</label>
+          <textarea id="consulta" name="consulta" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
   </main>
+
   <footer>
     <p>&copy; 2024 Ferretería La Forja</p>
   </footer>
