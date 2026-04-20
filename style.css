@@ -9,8 +9,13 @@
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #0f0f0e; ;
-
+    min-height: 100vh;
+    background-color: #181818;
+    background-image: url("laforja8.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #929090;
   }
   
   /* Estilos para el header */
@@ -160,10 +165,6 @@
   input[type="submit"]:hover {
     background-color: #e56d00;
     transform: scale(1.05);
-  }
-  body {
-    background-color: #181818; /* Tono más claro */
-    color: #929090;
   }
   
   header {
