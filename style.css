@@ -45,7 +45,7 @@ header {
 
 .logo-container img {
   width: auto;
-  max-width: 150px;
+  max-width: 350px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -320,7 +320,7 @@ footer p {
   }
 
   .logo-container img {
-    max-width: 120px;
+    max-width: 280px;
   }
 
   nav li {
@@ -346,7 +346,7 @@ footer p {
   }
 
   .logo-container img {
-    max-width: 100px;
+    max-width: 200px;
   }
 
   nav ul {
@@ -391,7 +391,7 @@ footer p {
   }
 
   .logo-container img {
-    max-width: 80px;
+    max-width: 120px;
   }
 
   h1 {
