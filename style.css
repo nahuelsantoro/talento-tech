@@ -54,7 +54,7 @@ header {
   display: block;
   margin: 0 auto;
   transition: transform 0.4s ease;
-  animation: logo-bounce 4s ease-in-out infinite;
+  animation: logo-bounce-v2 4s ease-in-out infinite;
 }
 
 .logo-container img:hover {
@@ -317,7 +317,7 @@ footer p {
   }
 }
 
-@keyframes logo-bounce {
+@keyframes logo-bounce-v2-v2 {
   0%, 100% {
     transform: translateY(0);
   }
@@ -448,3 +448,5 @@ footer p {
     align-self: stretch;
   }
 }
+
+
