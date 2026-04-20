@@ -49,11 +49,12 @@ header {
 }
 
 .logo-container img {
-  width: 100%;
+  width: auto;
   max-width: 100%;
   height: auto;
   max-height: 90px;
   display: block;
+  object-fit: contain;
   transition: transform 0.4s ease;
   animation: logo-bounce-v2 4s ease-in-out infinite;
 }
